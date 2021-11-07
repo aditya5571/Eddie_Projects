@@ -1,0 +1,9 @@
+#parse("/velocity/layout.vm")
+#@mainLayout()
+<form id="registerForm" method="post">
+    <h1 class="register heading">$msg.get("REGISTER_HEADING")</h1>
+    <p class="register instructions">$msg.get("REGISTER_INSTRUCTIONS")</p>
+
+    <a href="/signup"><li class="user register" name="userRegistration">$msg.get("USER_REGISTER_BUTTON")</li></a>
+</form>
+#end

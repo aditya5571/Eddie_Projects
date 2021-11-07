@@ -1,0 +1,468 @@
+
+* {
+    /*box-sizing: border-box;*/
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Tahoma, Arial, sans-serif;
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    padding: 0 0 40px;
+    color: #333;
+    background: #f9f9f9;
+}
+
+/*h1, h2, h3, h4 {*/
+/*    font-family: monospace;*/
+/*    font-weight: 300;*/
+/*    color: #444;*/
+/*}*/
+
+small {
+    color: #555;
+}
+
+header {
+    background: #1b333f;
+    border-bottom: 5px solid #008ab4;
+    box-shadow: 0 1px 0 0 rgba(0, 0, 0, .6);
+}
+
+nav {
+    padding: 15px;
+    margin: 0 auto;
+    max-width: 800px;
+    position: relative;
+}
+
+nav #menu {
+    margin-top: 20px;
+    float: right;
+}
+
+.anchor.nav {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.anchor.body {
+    text-decoration: none;
+    color: #000000;
+    font-size: 18px;
+}
+
+#menu li {
+    float: left;
+    margin: 0 10px;
+}
+
+#menu li a, #logout {
+    background: transparent;
+    cursor: pointer;
+    border: 0;
+    font-size: 16px;
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    text-decoration: none;
+}
+
+#logo {
+    max-height: 50px;
+}
+
+#chooseLanguage {
+    top: 15px;
+    right: 35px;
+    position: absolute;
+}
+
+#chooseLanguage li {
+    float: left;
+}
+
+#chooseLanguage button {
+    cursor: pointer;
+    margin-left: 8px;
+    width: 18px;
+    height: 18px;
+    border-radius: 9px;
+    opacity: 0.6;
+    border: 1px solid #222;
+    background-size: 100%;
+}
+
+#chooseLanguage button:hover {
+    opacity: 0.8;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 25px;
+}
+
+#content {
+    padding: 20px 10px 24px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    position: relative;
+    box-shadow: rgb(0 0 0 / 45%) 0px 2px 10px;
+    width: 786px;
+    min-height: 578px;
+    margin-left: -13px;
+    margin-top: -3px;
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    text-align: center;
+    background: #fff;
+    border-top: 1px solid #008ab4;
+    font-size: 14px;
+}
+
+nav ul, nav li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+/* Needlessly fancy menu hover effect */
+
+#menu li {
+    position: relative;
+}
+
+#menu li a::after, #logout:after {
+    position: absolute;
+    top: 28px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    content: '';
+    opacity: 0;
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+}
+
+#logout:hover::after,
+#logout:focus::after,
+#menu li a:hover::after,
+#menu li a:focus::after {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+}
+
+/* Very basic grid */
+.row {
+    width: 100%;
+    overflow: auto;
+}
+
+.row > * {
+    float: left;
+}
+
+.row-2 .col {
+    width: 49%
+}
+
+.row-2 .col:nth-child(odd) {
+    margin: 0% 1% 0% 0%
+}
+
+.row-2 .col:nth-child(even) {
+    margin: 0% 0% 0% 1%
+}
+
+.row-3 .col {
+    width: 32%
+}
+
+.row-3 .col:nth-child(3n+1) {
+    margin: 0% 1% 0% 0%
+}
+
+.row-3 .col:nth-child(3n+2) {
+    margin: 0% 1% 0% 1%
+}
+
+.row-3 .col:nth-child(3n+3) {
+    margin: 0% 0% 0% 1%
+}
+
+@media screen and (max-width: 550px) {
+    .row .col:nth-child(n) {
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
+.col img {
+    display: block;
+    width: 100%;
+}
+
+/* Show related stuff */
+
+a.book {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+a.book:hover {
+    background: #e2e9f5;
+}
+
+a .bookCover {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a .bookCover img {
+    border-radius: 5px;
+    min-height: 200px;
+    max-height: 200px;
+    width: auto;
+}
+
+.bookCover img {
+    margin-top: 20px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+/* Login Form */
+
+#loginForm {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#loginForm label {
+    display: block;
+    width: 100%
+}
+
+#loginForm input {
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+    width: 100%;
+    border-radius: 3px;
+    margin: 2px 0 20px 0;
+}
+
+#loginForm input[type="submit"] {
+    color: white;
+    background: #274555;
+    border: 0;
+    cursor: pointer;
+}
+
+#loginForm select {
+    border: 1px solid #ddd;
+    padding: 8px 10px;
+    width: 100%;
+    border-radius: 3px;
+    margin: 2px 0 20px 0;
+}
+
+.notification {
+    padding: 10px;
+    background: #333;
+    color: white;
+    border-radius: 3px;
+}
+
+.good.notification {
+    background: #008900;
+}
+
+.bad.notification {
+    background: #e02828;
+}
+
+.login.heading {
+    color: rgb(51, 51, 51);
+    font-size: 32px;
+    font-weight: bold;
+    font-family: "Segoe UI MONOSPACE";
+    letter-spacing: -1.2px;
+    word-break: break-word;
+    text-overflow: ellipsis;
+}
+
+/* Signup Form */
+
+#signupForm {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#signupForm label {
+    width: 100%;
+    min-height: 400px;
+    padding: 20px 0px 24px;
+}
+
+#signupForm input {
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+    width: 100%;
+    border-radius: 3px;
+    margin: 2px 0 20px 0;
+}
+
+.signup.heading {
+    color: rgb(51, 51, 51);
+    font-size: 32px;
+    font-weight: bold;
+    font-family: "Segoe UI MONOSPACE";
+    letter-spacing: -1.2px;
+    word-break: break-word;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+
+/* Register Form */
+
+#registerForm {
+    max-width: 400px;
+    margin: 0px auto;
+}
+
+#registerForm label {
+    display: block;
+    width: 100%;
+    min-height: 400px;
+    padding: 20px 10px 24px;
+}
+
+#registerForm input {
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+    width: 100%;
+    border-radius: 3px;
+    margin: 2px 0 20px 0;
+}
+
+.register.heading {
+    color: rgb(51, 51, 51);
+    font-size: 32px;
+    font-weight: bold;
+    font-family: "Segoe UI MONOSPACE";
+    letter-spacing: -1.2px;
+    word-break: break-word;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+
+.register.instructions {
+    text-align: center;
+}
+
+.user.register {
+    height: 40px;
+    display: block;
+    border-radius: 20px;
+    padding: 0px 0px 0px 8px;
+    font-size: 18px;
+    font-weight: normal;
+    margin: 20px auto 0px;
+    vertical-align: middle;
+    text-align: center;
+    background-clip: padding-box;
+    background-color: rgb(24, 140, 242);
+    width: 170px;
+}
+
+/* Search bar */
+
+nav .searchbar {
+    position: absolute;
+}
+
+/* Styling the search box where the
+    input would be given */
+nav .searchbar input[type="text"] {
+    border: 0;
+    padding: 2px 5px;
+    width: 305px;
+    height: 35px;
+    border-radius: 3px;
+    margin-left: 148px;
+    margin-top: -40px;
+    font: caption;
+}
+
+/* Styling the search bar icon */
+nav .searchbar .icon {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 35px;
+    height: 100%;
+    background: none;
+    border-radius: 3px;
+    color: #fff;
+}
+
+nav .searchbar .icon i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+nav .searchbar .icon.active {
+    background: #1b333f;
+}
+
+@media screen and (min-width: 600px) {
+    nav .searchbar {
+        padding: 4px;
+        margin-left: 50px;
+        margin-top: -31px;
+    }
+}
+
+/* Search results and Manage Movies */
+
+.search.results.heading .manage.movies.heading {
+    color: rgb(51, 51, 51);
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Segoe UI MONOSPACE";
+    letter-spacing: -1.2px;
+    word-break: break-word;
+    text-overflow: ellipsis;
+}

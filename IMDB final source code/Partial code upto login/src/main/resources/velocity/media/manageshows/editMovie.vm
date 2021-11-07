@@ -1,0 +1,25 @@
+#parse("/velocity/layout.vm")
+#@mainLayout()
+<form id="loginForm" method="post">
+    #if($editShowSuccessful)
+        <p class="good notification">$msg.get("INDEX_MOVIE_EDITED", $currentUser)</p>
+    #end
+
+    #if($oneShow)
+        <label>Title: $oneShow.getTitle()</label>
+        <input type="text" name="editedTitle" placeholder="$msg.get("EDIT_MOVIE_TITLE")" value="" required>
+        <h3>Genre: $oneShow.getGenre()</h3>
+        <input type="text" name="editedGenre" placeholder="$msg.get("EDIT_MOVIE_GENRE")" value="" required>
+        <h3>Length: $oneShow.getLength()</h3>
+        <input type="text" name="editedLength" placeholder="$msg.get("EDIT_MOVIE_LENGTH")" value="" required>
+        <h3>Year: $oneShow.getYear()</h3>
+        <input type="text" name="editedYear" placeholder="$msg.get("EDIT_MOVIE_YEAR")" value="" required>
+        #if($loginRedirect)
+            <input type="hidden" name="loginRedirect" value="$loginRedirect">
+        #end
+        <input type="submit" value="$msg.get("EDIT_BUTTON_CONFIRM")">
+    #else
+        <h1>$msg.get("INDEX_NO_TITLES_FOUND")</h1>
+    #end
+</form>
+#end
