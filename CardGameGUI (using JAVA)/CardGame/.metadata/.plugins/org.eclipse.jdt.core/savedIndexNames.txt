@@ -1,4 +1,0 @@
-INDEX VERSION 1.131+C:\Users\adity\eclipse-workspace\CardGame\.metadata\.plugins\org.eclipse.jdt.core
-3667479441.index
-3952730406.index
-1901201092.index
