@@ -1,0 +1,84 @@
+.review-form {
+    margin-left: 1%;
+}
+
+.review-container {
+    max-width: 583px;
+}
+
+.rating-container {
+    position: relative;
+    height: 25px;
+    line-height: 25px;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.rating-container label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    cursor: pointer;
+}
+
+.rating-container label:last-child {
+    position: static;
+}
+
+.rating-container label:nth-child(1) {
+    z-index: 5;
+}
+
+.rating-container label:nth-child(2) {
+    z-index: 4;
+}
+
+.rating-container label:nth-child(3) {
+    z-index: 3;
+}
+
+.rating-container label:nth-child(4) {
+    z-index: 2;
+}
+
+.rating-container label:nth-child(5) {
+    z-index: 1;
+}
+
+.rating-container label input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.rating-container label .icon {
+    float: left;
+    color: transparent;
+}
+
+.rating-container label:last-child .icon {
+    color: #000000;
+}
+
+.rating-container:not(:hover) label input:checked ~ .icon,
+.rating-container:hover label:hover input ~ .icon {
+    color: #FFD700;
+}
+
+.rating-container label input:focus:not(:checked) ~ .icon:last-child {
+    color: #000000;
+    text-shadow: 0 0 5px #FFD700;
+}
+
+.review-btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0 8px 30%;
+    border: none;
+    cursor: pointer;
+    width: 40%;
+    opacity: 0.9;
+}
