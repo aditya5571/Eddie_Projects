@@ -1,0 +1,4 @@
+#parse("/velocity/layout.vm")
+#@mainLayout()
+<h4>$msg.get("INDEX_MOVIE_DELETED")</h4>
+#end

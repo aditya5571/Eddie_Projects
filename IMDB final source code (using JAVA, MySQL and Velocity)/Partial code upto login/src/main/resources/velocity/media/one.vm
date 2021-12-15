@@ -1,0 +1,15 @@
+#parse("/velocity/layout.vm")
+#@mainLayout()
+    #if($oneShow)
+        <h3>Title:</h3>
+        <p>$oneShow.getTitle()</p>
+        <h3>Genre:</h3>
+        <p>$oneShow.getGenre()</p>
+        <h3>Length:</h3>
+        <p>$oneShow.getLength()</p>
+        <h3>Year:</h3>
+        <p>$oneShow.getYear()</p>
+    #else
+        <h1>$msg.get("INDEX_NO_TITLES_FOUND")</h1>
+    #end
+#end

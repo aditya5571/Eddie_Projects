@@ -1,0 +1,233 @@
+img {
+  width: 100%;
+}
+
+.navbar {
+  background-color: #e3f2fd;
+}
+.fa.fa-edit {
+  color: #18a2b9;
+}
+
+.list-group-item.delete:hover {
+  cursor: -webkit-grab;
+  background-color: pink;
+}
+
+.list-group-item.update:hover {
+  cursor: -webkit-grab;
+  background-color: gainsboro;
+}
+
+.list-group-item.board:hover {
+  cursor: -webkit-grab;
+  background-color: gainsboro;
+}
+
+.fa.fa-minus-circle {
+  color: red;
+}
+
+.landing {
+  position: relative;
+  /* background: url("../img/showcase.jpg") no-repeat; */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin-top: -24px;
+  margin-bottom: -50px;
+  background-color: black;
+}
+
+.landing-inner {
+  padding-top: 80px;
+}
+
+.dark-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card-form {
+  opacity: 0.9;
+}
+
+.latest-profiles-img {
+  width: 40px;
+  height: 40px;
+}
+
+.form-control::placeholder {
+  color: #bbb !important;
+}
+
+.book {
+  flex: 0 0 19.7%;
+  text-align: center;
+  margin: 0 13px;
+  transition: transform 300ms ease 100ms;
+  padding: 5px 11px;
+}
+
+.book-title-text {
+  color: white;
+}
+
+/* .sliderContainer:hover .book {
+  transform: translateX(-25%);
+} */
+
+
+.img-class {
+  height: auto;
+  max-height: 280px;
+  width: auto;
+  max-width: 280px;
+}
+
+.img-class-thriller {
+  height: auto;
+  max-height: 700px;
+  width: auto;
+  max-width: 700px;
+  padding-left: 15%;
+}
+
+.carousel-container {
+  padding: 30px 10px 0px 10px;
+  padding-bottom: 30px;
+}
+
+.book:hover {
+  transform: scale(1.25) !important;
+  cursor: pointer;
+}
+
+.book-cover-image-container {
+  height: auto;
+  max-height: 350px;
+  width: auto;
+  max-width: 350px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+input[type=text].search-bar {
+  font-size: 15px;
+  width: 80%;
+  box-sizing: border-box;
+  border: 5px solid #ffffff;
+  border-radius: 8px;
+  padding: 2px;
+  margin-left: 20px;
+  transition: width 0.5s ease-in-out;
+}
+
+input[type=text].search-bar:focus {
+  width: 100%;
+}
+
+.search-button {
+  border: 6px solid #ffba00;
+  background: #ffba00;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.search-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.book-title {
+  font-family: Copernicus,"Libre Baskerville",Georgia,serif;
+  font-weight: 400;
+  font-size: 2.8rem;
+  line-height: 2.6rem;
+}
+
+.book-author {
+  font-family: Copernicus,"Libre Baskerville",Georgia,serif;
+  font-weight: 200;
+  line-height: 2.4rem;
+  font-size: 1.6rem;
+}
+
+.book-desc {
+  font: 400 1.2rem/1.4375 "Proxima Nova",Montserrat,Arial,sans-serif;
+}
+
+.book-review {
+  font-family: Copernicus,"Libre Baskerville",Georgia,serif;
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 2.6rem;
+}
+
+.book-review-userphoto-container {
+  height: 100%;
+  width: 100%;
+}
+
+.seller {
+  text-align: right;
+
+}
+.App{
+  min-height: calc(100vh - 52px);
+}
+.fa{
+  margin: 0 2rem 0 2rem;
+}
+
+
+/*
+  Special Bookeroo Theme Design
+  Author: Aditya Vadgama
+*/
+
+.bookeroo-container {
+  background: #141d2b;
+  min-height: fit-content;
+}
+
+.bookeroo-logo {
+  padding: 185px;
+}
+
+.bookeroo-font-title {
+  font-family: Neue Haas Unica;
+  font-weight: 600;
+  font-size: 4.6rem;
+  color: white;
+}
+
+.bookeroo-font-category-title {
+  font-family: 'Chalkduster', 'fantasy';
+  font-weight: 800;
+  font-size: 59px;
+  color: white;
+  text-align: center;
+}
+
+.bookeroo-nav {
+  background-color: #141d2b;
+}
+
+.bookeroo-books {
+  padding: 150px 25px;
+}
+
+.bookeroo-footer {
+  background-color: #141d2b;
+  padding-inline: inherit;
+}
+

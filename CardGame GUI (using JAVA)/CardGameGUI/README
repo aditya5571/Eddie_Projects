@@ -1,0 +1,29 @@
+
+How the project runs:
+
+	=> From package "client", the class MyTestClient instantiates both GameEngineImpl and GameEngineImplGUI classes
+	before passing them inside the contructor of GameEngineCallbackGUI class, which is the entry point of all UI code.
+	Note that this class is now also added as a callback alongwith the previous GameEngineCallbackImpl.
+	
+	=> From GameEngineCallbackGUI, GameFrame is instantiated and all other view classes also instantiated and added to
+	the frame. Rest of the gameplay starts when the Add Player button is first clicked. Appropriate comments are there to 
+	show the flow.
+	
+	=> Almost every view class, after being instantiated in the gameFrame, is then passed via constructors to other view
+	classes as deemed necessary.
+
+
+Potential problems that are not solved:
+
+	1. After two players are added and deal is finished for the first player, the cards will show
+		on the cardPanel nicely. But they sort of fluctuate and get repainted twice, like an up and down
+		phenomena. Also, when the other player is switched from the comboBox, who hasn't dealt, the previous
+		player's cards do not disappear from the panel - this is the problem. However, the switchable panel
+		does function partially, in the sense that, after the second player is finished dealing, when the 
+		first player is again clicked, his cards do reappear on the panel. Same thing will happen for the 
+		second player and the house now that all have dealt.
+
+	2. The fontsize is hardcoded, i.e. the card labels do not get scaled properly when the panel is stretched.
+	
+	3. If user enters integer in an input dialog box that is expecting string, the program runs into exception,
+	but the entry will successfully NOT be recorded and user will be notified accordingly.

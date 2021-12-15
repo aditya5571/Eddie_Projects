@@ -1,0 +1,2 @@
+Open someLink.com
+Search on google someString

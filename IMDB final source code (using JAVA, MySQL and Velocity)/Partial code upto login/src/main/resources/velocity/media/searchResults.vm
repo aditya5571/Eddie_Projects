@@ -1,0 +1,33 @@
+#parse("/velocity/layout.vm")
+#@mainLayout()
+<h1 class="search results heading">$msg.get("INDEX_SEARCH_RESULTS")</h1>
+<p>$msg.get("INDEX_MANAGE_MOVIES_INSTRUCTION")</p>
+<br>
+    #if($noShowsFound)
+        <p>$msg.get("INDEX_NO_TITLES_FOUND")</p>
+    #else
+        <h4>Titles:</h4>
+        #foreach($oneShow in $allShows)
+            #if($adminUser)
+                <div class="col">
+                    <a class="anchor body" href="/searchResults/$oneShow.getId()">
+                        <p>$oneShow.getTitle()</p>
+                    </a>
+                    <a href="/searchResults/deleteMovie/$oneShow.getId()">
+                        <button>$msg.get("INDEX_DELETE_MOVIE")</button>
+                    </a>
+                    <a href="/searchResults/editMovie/$oneShow.getId()">
+                        <button>$msg.get("INDEX_EDIT_MOVIE")</button>
+                    </a>
+                </div>
+            #else
+                <div class="col">
+                    <a class="anchor body" href="/searchResults/$oneShow.getId()">
+                        <p>$oneShow.getTitle()</p>
+                    </a>
+                </div>
+            #end
+        #end
+
+    #end
+#end

@@ -1,0 +1,21 @@
+#* @implicitly included *#
+#* @vtlvariable name="WebPath" type="app.front.Path.Web" *#
+#* @vtlvariable name="msg" type="app.controller.localisation.MessageBundle" *#
+#* @vtlvariable name="books" type="java.lang.Iterable<app.model.Show>" *#
+#* @vtlvariable name="book" type="app.model.Show" *#
+#* @vtlvariable name="users" type="java.lang.Iterable<app.model.User>" *#
+#* @vtlvariable name="currentUser" type="java.lang.String" *#
+#* @vtlvariable name="loggedOut" type="java.lang.String" *#
+#* @vtlvariable name="authenticationFailed" type="java.lang.String" *#
+#* @vtlvariable name="authenticationSucceeded" type="java.lang.String" *#
+#* @vtlvariable name="loginRedirect" type="java.lang.String" *#
+#* @vtlvariable name="adminUser" type="java.lang.String" *#
+#* @vtlvariable name="noShowsFound" type="java.lang.String" *#
+#* @vtlvariable name="oneShow" type="app.model.Show" *#
+#* @vtlvariable name="allShows" type="java.lang.Iterable<app.model.Show>" *#
+#* @vtlvariable name="editShowSuccessful" type="java.lang.String" *#
+#* @vtlvariable name="noRequestsFound" type="java.lang.String" *#
+#* @vtlvariable name="requestSent" type="java.lang.String" *#
+#* @vtlvariable name="allRequests" type="java.lang.Iterable<app.model.Request>" *#
+#* @vtlvariable name="requestAccepted" type="java.lang.String" *#
+#* @vtlvariable name="requestRejected" type="java.lang.String" *#

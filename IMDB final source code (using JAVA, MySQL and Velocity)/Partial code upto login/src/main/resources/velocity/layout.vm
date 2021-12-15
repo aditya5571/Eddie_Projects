@@ -1,0 +1,54 @@
+#macro(mainLayout)
+<html>
+<head>
+    <title>$msg.get("COMMON_TITLE")</title>
+    <link rel="stylesheet" href="/main.css">
+    <link rel="icon" href="/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href=
+            "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a class="anchor nav" href="/index"><img id="logo" src="/img/realIMDB.png" alt="Real IMDB"></a>
+
+            <form class="searchbar" method="post" action="/searchResults">
+                <input type="text" name="searchRequest" placeholder="$msg.get("COMMON_NAV_SEARCH_PLACEHOLDER")">
+                <button class="fas fa-search"></button>
+            </form>
+
+            <ul id="menu">
+                #if($currentUser)
+                    <li>
+                        <form method="post" action="/logout">
+                            <button id="logout">$msg.get("COMMON_NAV_LOGOUT")</button>
+                        </form>
+                    </li>
+                #elseif($adminUser)
+                    <li><a class="anchor nav" href="/manageRequests">$msg.get("COMMON_NAV_MANAGE_REQUESTS")</a></li>
+                    <li>
+                        <form method="post" action="/logout">
+                            <button id="logout">$msg.get("COMMON_NAV_LOGOUT")</button>
+                        </form>
+                    </li>
+                #else
+                    <li><a class="anchor nav" href="/registerUser">$msg.get("COMMON_NAV_SIGNUP")</a></li>
+                    <li><a class="anchor nav" href="/login">$msg.get("COMMON_NAV_LOGIN")</a></li>
+                #end
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="content">
+            $bodyContent
+        </div>
+    </main>
+
+    <footer>
+        $msg.get("COMMON_FOOTER_TEXT")
+    </footer>
+</body>
+</html>
+#end

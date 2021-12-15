@@ -1,0 +1,30 @@
+#parse("/velocity/layout.vm")
+#@mainLayout()
+<form id="signupForm" method="post">
+    #if($requestSent)
+        <p class="good notification">$msg.get("SIGNUP_REQUEST_SENT")</p>
+    #end
+
+    <h1 class="signup heading">$msg.get("SIGNUP_HEADING")</h1>
+    <label>$msg.get("LOGIN_LABEL_FIRSTNAME")</label>
+    <input type="text" name="firstname" placeholder="$msg.get("LOGIN_LABEL_FIRSTNAME")" value="" required>
+    <label>$msg.get("LOGIN_LABEL_LASTNAME")</label>
+    <input type="text" name="lastname" placeholder="$msg.get("LOGIN_LABEL_LASTNAME")" value="" required>
+    <label>$msg.get("LOGIN_LABEL_USERNAME")</label>
+    <input type="text" name="signUpUsername" placeholder="$msg.get("LOGIN_LABEL_USERNAME")" value="" required>
+    <label>$msg.get("LOGIN_LABEL_CREATE_PASSWORD")</label>
+    <input type="password" name="signUpPassword" placeholder="$msg.get("LOGIN_LABEL_CREATE_PASSWORD")" value="" required>
+    <label>$msg.get("LOGIN_LABEL_EMAIL")</label>
+    <input type="email" name="email" placeholder="$msg.get("LOGIN_LABEL_EMAIL")" value="" required>
+    <label>$msg.get("LOGIN_LABEL_GENDER")</label>
+    <input type="text" name="gender" placeholder="$msg.get("LOGIN_LABEL_GENDER")" value="" required>
+    <label>$msg.get("LOGIN_LABEL_COUNTRY")</label>
+    <input type="text" name="country" placeholder="$msg.get("LOGIN_LABEL_COUNTRY")" value="" required>
+
+    #if($loginRedirect)
+        <input type="hidden" name="loginRedirect" value="$loginRedirect">
+    #end
+
+    <input type="submit" value="$msg.get("SIGNUP_HEADING")">
+</form>
+#end
